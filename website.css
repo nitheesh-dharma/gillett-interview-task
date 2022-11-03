@@ -1,0 +1,209 @@
+
+
+body,html{
+  margin:0;
+  background-color:rgb(251, 240, 240);
+  font-family:'Times New Roman', Times, serif;
+}
+
+
+/* 
+  Make the white strip at the top
+*/
+.top{
+  position: fixed;
+  top:0;
+  background: white;
+  height: 1%;/*Set height to one percent of the body*/
+  width: 100%;/* Full width */
+}
+
+/* 
+  Define properties for the banner
+*/
+.banner{
+  margin: 0.7% 0 0; /* set top margin to 0.7%, left and right margins to zero */
+  background-color: rgb(98, 95, 95);
+  color: white; /* Font colour */
+  box-shadow: 5px 5px 2px rgb(82, 81, 81); /* Add shadow effect to banner */
+
+}
+
+/* 
+  Define properties for the banner text
+*/
+.banner p {
+ padding: 2.5%; 
+ font-size: 27px; 
+ margin:0; /* Set all margins to zero */
+
+}
+
+/* 
+  Define properties for the table
+*/
+table {
+  border-collapse: collapse; /* Collapse the table borders*/
+  width : 96%; 
+  /* Center the table */
+  margin-left:auto; 
+  margin-right:auto;
+  margin-top:3%; /* Define margin at the top */
+  margin-bottom: 2%; /* Define margin at the bottom */
+   
+}
+/* 
+  Define table heading and table data properties
+*/
+th,td{
+  border: 1px solid rgb(221, 221, 221); /* Add solid border */
+  text-align: center;
+  background-color: rgb(70,130,200); 
+  color: white;
+  padding: 1%; 
+  font-size: 19px;
+}
+/* 
+  Properties for elements in table cells 
+*/
+td{
+  text-align: left;
+  background-color: white; 
+  color:black;
+}
+
+
+
+
+/* 
+  Properties for text under the table(time for total decay)
+ */
+span{
+  margin-top: 3%; 
+  padding-top: 3%;
+  margin-left: 2%;
+  font-size: 19px;
+}
+
+
+
+/* 
+  Properties for modal popup background
+*/
+#modal-background{
+  position: absolute;
+  display: none;  /*Hidden by default*/ 
+  right: 0; /* Position to the right edge of the page */
+  bottom: 0; /* Position to the bottom of the page */
+  width: 100%; /* Full width */
+  height: 98.8%; 
+  background-color:rgba(0,0,0,0.25); /* Black with opacity */; 
+}  
+
+/* 
+  Properties for modal popup container
+*/
+
+.modal-container{
+  position: absolute;
+  display: none;  /* Hidden by default */
+  right: 0; /* Position to the right edge of the page */
+  bottom: 0; /* Position to the bottom of the page */
+  background-color: none;
+  height: 98.8%; 
+  width: 40%;
+}
+
+/* 
+  Properties for the form
+*/
+form {
+  bottom: 0;
+  right: 0;
+  padding-top: 5%;
+  padding-left: 5%;
+  background-color: #fefefe;
+  width: 100%; /* popup covers 40% of the page width*/
+  height: 99%; 
+  transform: translateX(100%); /* move form of the page to the right*/
+  box-shadow: -1px 14px 10px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* 
+  Properties for add new nuclide button and buttons inside the form
+*/
+button,input[type=button]{
+  margin-top: 3%; 
+  margin-left: 2%;
+  background-color: rgb(70,130,200);
+  color: white;
+  padding:1%;
+  border-radius: 9px; /* Make borders rounded */
+  border:  2px solid rgb(49, 177, 219);
+  
+  font-size: 19px;
+  cursor: pointer;
+}
+
+/* 
+  Properties for buttons inside the form
+*/
+input[type=button]{
+    margin-left: 0;
+    padding: 3%; 
+}
+
+label{
+  font-size: 19px;
+}
+
+/* 
+  Properties for text box inside the form
+*/
+input[type=text]{
+  margin-bottom: 5%;
+  margin-top: 1%;
+  width: 80%; 
+  padding: 12px 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 19px;
+  outline:none;
+ }
+
+/* Make border of text boxes blue when clicked on */
+input[type=text]:focus {
+border: 3px solid rgb(70,130,200);
+}
+
+/* Fade button out when hovered on*/
+button:hover, input[type=button]:hover {opacity: 0.6;}
+
+
+
+
+
+/* Slide form in */
+@keyframes slideIn {
+  /* move into the page if it is not on it */
+  0%{
+    transform: translateX(100%);
+  }
+  100%{
+    transform: translateX(0);
+  }
+}
+
+/* SSlide form out */
+@keyframes slideOut {
+  0%{
+    transform: translateX(0);
+  }
+  /* move off the page if it is on it */
+  100%{
+    transform: translateX(100%);
+  }
+}
+
+
+

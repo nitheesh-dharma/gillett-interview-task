@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+      <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+      <title>Decay calculator</title>
+      <link rel="stylesheet" href = "website.css">
+      <script src = "app.js"></script>
+    </head>
+    <body>
+      <!-- White strip at top -->
+      <div class="top">  </div>
+      <!-- Banner of the website-->
+      <div class = "banner"> 
+        <p>Nuclide decay calculator</p>
+      </div>
+       <!-- Table to store nuclide information -->
+      <table id = "table_data">
+        <!-- Add table headers -->
+        <tr>
+          <th>Nuclide Name</th>
+          <th>Half-Life</th>
+          <th>Start activity</th>
+          <th>@ 1 day</th>
+          <th>@ 10 day</th>
+          <th>@ 100 day</th>
+          <th>@ 1000 day</th>
+          <th> Days &lt; 1 </th>
+        </tr>
+      </table>
+        
+      <!-- Diaply total number of days to decay -->  
+      <span id = "tot-days">Time for total activity to decay: 0 days</span> <br>
+      <!-- Button to add nuclide inofrmation -->
+      <button type="button" id = "create-btn" onclick="openModal()">Add new nuclide</button>
+
+      <!-- Container for  modal background-->
+      <div id="modal-background"></div>
+      
+      <!-- Container for modal pop up -->
+      <div class="modal-container" id = "modal-container"> 
+        <!-- Add form to get relevant inforamtion-->
+        <form>
+          <label for = "nname"> Nuclide name </label><br>
+          <input type="text" id = "nname" name = "nname"><br> 
+          <label for = "half-life"> Half-life </label><br>
+          <input type="text" id = "half-life" name = "half-life"><br> 
+          <label for="activity">Activity</label><br>
+          <input type="text" id = "activity" name = "activity"><br> 
+
+          <!-- Add buttons to add informaion to table and to cancel-->
+          <input type = "button" id = "add_btn" value = "Add to table" onclick="updateNuclideInfo()">
+          <input type = "button" id = "cancel_btn" value = "Cancel" onclick="closeModal()">
+        </form>
+      </div>
+
+    </body>
+
+</html>
